@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>To-Do List</h1>
+      <p id="current-date" class="date"></p>
+    </header>
+
+    <main>
+      <div class="input-group">
+        <input id="task-input" type="text" placeholder="Add a new task and press Enter or click Add">
+        <button id="add-btn">Add</button>
+      </div>
+
+      <ul id="todo-list" class="todo-list"></ul>
+    </main>
+
+    <footer>
+      <p>Saved in your browser • localStorage</p>
+    </footer>
+  </div>
+
+  <template id="task-template">
+    <li class="task-item">
+      <div class="left">
+        <input type="checkbox" class="task-check">
+        <span class="task-text"></span>
+        <input class="task-edit-input" type="text" style="display:none;">
+      </div>
+      <div class="actions">
+        <button class="edit-btn" title="Edit">Edit</button>
+        <button class="save-btn" style="display:none;" title="Save">Save</button>
+        <button class="cancel-btn" style="display:none;" title="Cancel">Cancel</button>
+        <button class="delete-btn" title="Delete">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
